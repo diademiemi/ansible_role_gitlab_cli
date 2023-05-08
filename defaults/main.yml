@@ -1,3 +1,6 @@
 ---
+gitlab_cli_package_version: "1.29.0"
+gitlab_cli_package_url: "{{ _gitlab_cli_package_url }}"
+gitlab_cli_package_path: /tmp/
 
 ...

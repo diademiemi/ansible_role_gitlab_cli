@@ -1,0 +1,13 @@
+---
+- name: Download gitlab_cli_package_url
+  ansible.builtin.get_url:
+    url: "{{ gitlab_cli_package_url }}"
+    dest: "{{ gitlab_cli_package_path }}/{{ gitlab_cli_package_url | basename }}"
+    mode: "0644"
+
+- name: Install gitlab_cli
+  ansible.builtin.apt:
+    deb: "{{ gitlab_cli_package_path }}/{{ gitlab_cli_package_url | basename }}"
+    state: present
+
+...

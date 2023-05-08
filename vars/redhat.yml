@@ -1,0 +1,4 @@
+---
+gitlab_cli_package_filename: "glab_{{ gitlab_cli_package_version }}_Linux_{{ ansible_facts['architecture'] }}.rpm"
+
+...

@@ -9,6 +9,8 @@
       when: ansible_facts["os_family"] == "Debian"
       changed_when: false # Breaks idempotency test
   tasks:
-    - name: "Include diademiemi.template"
+    - name: "Include diademiemi.gitlab_cli"
       ansible.builtin.include_role:
         name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+
+...
