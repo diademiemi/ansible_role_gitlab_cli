@@ -6,6 +6,7 @@
     mode: "0644"
 
 - name: Install gitlab_cli
+  become: true
   ansible.builtin.apt:
     deb: "{{ gitlab_cli_package_path }}/{{ gitlab_cli_package_url | basename }}"
     state: present
