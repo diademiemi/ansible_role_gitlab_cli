@@ -1,0 +1,5 @@
+---
+gitlab_cli_package_base_url: "https://gitlab.com/gitlab-org/cli/-/releases/v{{ gitlab_cli_package_version }}/downloads/"
+_gitlab_cli_package_url: "https://gitlab.com/gitlab-org/cli/-/releases/v{{ gitlab_cli_package_version }}/downloads/{{ gitlab_cli_package_filename }}"
+
+...
