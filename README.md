@@ -1,7 +1,7 @@
 Ansible Role GitLab CLI
 =========
 
-[![Molecule Test](https://github.com/diademiemi/ansible_role_gitlab_cli/actions/workflows/molecule.yml/badge.svg)](https://github.com/diademiemi/ansible_role_gitlab_cli/actions/workflows/molecule.yml)
+[![Molecule Test](https://gitlab.com/diademiemi/ansible_role_gitlab_cli/actions/workflows/molecule.yml/badge.svg)](https://gitlab.com/diademiemi/ansible_role_gitlab_cli/actions/workflows/molecule.yml)
 
 This is an Ansible role to install gitlab_cli.
 
@@ -44,10 +44,12 @@ Example Playbook
 ----------------
 
 ```yaml
-- name: Use gitlab_cli role
+- name: Use diademiemi.gitlab_cli role
   hosts: "{{ target | default('gitlab_cli') }}"
   roles:
-    - diademiemi.gitlab_cli
+    - role: "diademiemi.gitlab_cli"
+      tags: ['diademiemi', 'gitlab_cli', 'setup']
+
 ```
 
 License
@@ -76,6 +78,6 @@ Run the tests with
 molecule test
 ```
 
-These tests are automatically ran by GitHub Actions on push. If the tests are successful, the role is automatically published to Ansible Galaxy.
+These tests are automatically ran by Gitlab Actions on push. If the tests are successful, the role is automatically published to Ansible Galaxy.
 
-GitHub Actions is supposed to fail for this gitlab_cli repository, as it does not contain any meaningful role. There is an explicit assertion to check if the role name has been changed from `gitlab_cli` which causes the test to fail.  
+Gitlab Actions is supposed to fail for this gitlab_cli repository, as it does not contain any meaningful role. There is an explicit assertion to check if the role name has been changed from `gitlab_cli` which causes the test to fail.  
