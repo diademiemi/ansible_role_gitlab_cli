@@ -16,7 +16,7 @@ These platforms are supported:
 - EL 9 (Tested on Rocky Linux 9)  
 - Fedora 38  
 
-<!-- 
+<!--
 - List hardware requirements here  
 -->
 
@@ -78,5 +78,4 @@ molecule test
 
 These tests are automatically ran by GitHub Actions on push. If the tests are successful, the role is automatically published to Ansible Galaxy.
 
-GitHub Actions is supposed to fail for this gitlab_cli repository, as it does not contain any meaningful role. There is an explicit assertion to check if the role name has been changed from `gitlab_cli` which causes the test to fail.    
-
+GitHub Actions is supposed to fail for this gitlab_cli repository, as it does not contain any meaningful role. There is an explicit assertion to check if the role name has been changed from `gitlab_cli` which causes the test to fail.  
