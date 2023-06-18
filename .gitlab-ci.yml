@@ -6,6 +6,9 @@ before_script:
   - python3 -m pip install --upgrade pip
   - python3 -m pip install -r requirements.txt
   - ansible-galaxy install -r requirements.yml
+  # Set netns and utsns to "private" in /etc/containers/containers.conf
+  - sed -i 's/.*netns.*/netns="private"/' /etc/containers/containers.conf
+  - sed -i 's/.*utsns.*/utsns="private"/' /etc/containers/containers.conf
   - podman info
   - ansible --version
   - molecule --version
