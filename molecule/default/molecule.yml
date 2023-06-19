@@ -90,9 +90,6 @@ platforms:
     command: "/usr/sbin/init"
 provisioner:
   name: ansible
-  env:
-    ANSIBLE_LOCAL_TEMP: "${HOME}/.ansible/tmp"
-    ANSIBLE_REMOTE_TMP: /tmp/ansible
 verifier:
   name: ansible
 
