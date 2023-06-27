@@ -45,6 +45,9 @@ galaxy_info:
       versions:
         - buster
         - bullseye
+    - name: opensuse
+      versions:
+        - "15.4"
 
   galaxy_tags: []
     # List tags for your role here, one per line. A tag is a keyword that describes
