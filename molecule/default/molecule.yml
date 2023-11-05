@@ -89,7 +89,7 @@ platforms:
     privileged: true
     command: "/usr/sbin/init"
   - name: opensuse15
-    image: ghcr.io/diademiemi/docker-opensuse15-ansible
+    image: geerlingguy/docker-opensuseleap15-ansible:latest
     pre_build_image: true
     systemd: true
     tmpfs:
